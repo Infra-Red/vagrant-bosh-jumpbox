@@ -6,5 +6,5 @@
 #
 # All rights reserved - Do Not Redistribute
 #
-include_recipe 'vagrant-bosh-jumpbox::base'
-include_recipe 'vagrant-bosh-jumpbox::bosh'
+include_recipe 'bosh-jumpbox::base'
+include_recipe 'bosh-jumpbox::bosh'

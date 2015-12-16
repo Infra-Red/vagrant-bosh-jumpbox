@@ -1,7 +1,7 @@
 bosh-jumpbox CHANGELOG
 ==============================
 
-This file is used to list changes made in each version of the vagrant-bosh-jumpbox cookbook.
+This file is used to list changes made in each version of the bosh-jumpbox cookbook.
 
 0.1.0
 -----

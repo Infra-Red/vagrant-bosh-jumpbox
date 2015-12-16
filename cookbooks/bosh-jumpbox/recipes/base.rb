@@ -6,6 +6,7 @@
 #
 # All rights reserved - Do Not Redistribute
 #
+include_recipe 'apt'
 include_recipe 'ark'
 include_recipe 'ruby-ng::dev'
 include_recipe 'golang'

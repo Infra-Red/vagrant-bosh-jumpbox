@@ -19,7 +19,7 @@ ark 'spiff' do
    url node['spiff']['release']
    creates 'spiff'
    path node['spiff']['path']
-   mode 755
+   mode 0755
    checksum node['spiff']['checksum']
    action :cherry_pick
  end
@@ -53,4 +53,8 @@ end
 dpkg_package "cf-cli-#{ node['cf-cli']['version'] }" do
   source "#{Chef::Config['file_cache_path']}/cf-cli-installer-#{ node['cf-cli']['version'] }.deb"
   action :install
+end
+
+execute 'Check out a copy of cf-acceptance-tests' do
+  command "go get -d #{node['cf']['tests']}"
 end

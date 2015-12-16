@@ -8,6 +8,7 @@ default['cf-cli']['checksum'] = '9b5438a86d2a080056e39fa7b85e9d14e9c34e48ecf9658
 default['cf-cli']['release'] = 'http://go-cli.s3-website-us-east-1.amazonaws.com/releases/v6.14.0/cf-cli-installer_6.14.0_x86-64.deb'
 default['cf-cli']['version'] = '6.14.0'
 default['cf-uaac']['version'] = '3.1.5'
+default['cf']['tests'] = 'github.com/cloudfoundry/cf-acceptance-tests'
 default['spiff']['checksum'] = 'a34ee47a75dee89b5195d5901a4230105a5e8249b57b1c63e1c982afacfbc627'
 default['spiff']['path'] = '/usr/local/bin/'
 default['spiff']['release'] = 'https://github.com/cloudfoundry-incubator/spiff/releases/download/v1.0.7/spiff_linux_amd64.zip'

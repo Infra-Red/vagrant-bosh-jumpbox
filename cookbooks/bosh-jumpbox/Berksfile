@@ -1,0 +1,9 @@
+Encoding.default_external = "UTF-8"
+
+source "https://supermarket.chef.io"
+
+metadata
+
+cookbook 'ark', git: 'git://github.com/burtlo/ark.git'
+cookbook 'golang', git: 'git://github.com/NOX73/chef-golang.git'
+cookbook 'ruby-ng', '~> 0.3.0'

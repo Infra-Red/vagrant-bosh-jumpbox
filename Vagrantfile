@@ -1,13 +1,19 @@
 # -*- mode: ruby -*-
 # vi: set ft=ruby :
-require_relative 'aws_vars_test.rb'
-include SettingsAws
+require_relative 'aws_vars.rb'
+include VarsAws
 
 Vagrant.configure("2") do |config|
 
   config.vm.provider :aws do |aws, override|
     override.vm.box = AWS_NAME
     override.vm.box_url = "https://github.com/mitchellh/vagrant-aws/raw/master/dummy.box"
+
+    aws.block_device_mapping = [{
+      'DeviceName' => '/dev/sda1',
+      'Ebs.VolumeSize' => 20,
+      'Ebs.VolumeType' => 'gp2',
+      'Ebs.DeleteOnTermination' => 'true' }]
 
     aws.ami = AWS_UBUNTU_AMI
     aws.access_key_id = AWS_ACCESS_KEY

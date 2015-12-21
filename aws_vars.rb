@@ -1,6 +1,6 @@
 # Ubuntu Amazon EC2 AMI Finder: https://cloud-images.ubuntu.com/locator/ec2/
 #
-module SettingsAws
+module VarsAws
   AWS_NAME = "bosh-jumpbox"
   AWS_ACCESS_KEY = ""
   AWS_SECRET_KEY = ""

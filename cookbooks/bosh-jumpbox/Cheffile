@@ -1,0 +1,12 @@
+site "https://supermarket.getchef.com/api/v1"
+
+cookbook "ark",
+  :git => "https://github.com/burtlo/ark",
+
+cookbook "apt",
+  :git => "https://github.com/chef-cookbooks/apt",
+
+cookbook "golang",
+  :git => "https://github.com/NOX73/chef-golang",
+
+cookbook "ruby-ng"

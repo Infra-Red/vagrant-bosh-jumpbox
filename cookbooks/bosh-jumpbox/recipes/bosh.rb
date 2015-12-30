@@ -24,6 +24,15 @@ ark 'spiff' do
   action :cherry_pick
 end
 
+gem_package 'rubygems-update' do
+  action :upgrade
+end
+
+gem_package 'fog' do
+  version node['fog']['version']
+  action :install
+end
+
 gem_package 'bosh_cli' do
   version node['bosh']['version']
   action :install

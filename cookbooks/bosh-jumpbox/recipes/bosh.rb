@@ -63,11 +63,3 @@ dpkg_package "cf-cli-#{node['cf-cli']['version']}" do
   source "#{Chef::Config['file_cache_path']}/cf-cli-installer-#{node['cf-cli']['version']}.deb"
   action :install
 end
-
-bash 'Check out a copy of cf-acceptance-tests' do
-  cwd '/opt'
-  code <<-EOH
-    chmod -R 755 go/
-    go get -d #{node['cf']['tests']}
-    EOH
-end

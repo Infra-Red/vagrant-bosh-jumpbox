@@ -8,7 +8,6 @@ default['cf-cli']['checksum'] = '65773a4abc61e43f7031bbb3222bba0f4bf3912748245f3
 default['cf-cli']['release'] = 'http://go-cli.s3-website-us-east-1.amazonaws.com/releases/v6.14.1/cf-cli-installer_6.14.1_x86-64.deb'
 default['cf-cli']['version'] = '6.14.1'
 default['cf-uaac']['version'] = '3.1.5'
-default['cf']['tests'] = 'github.com/cloudfoundry/cf-acceptance-tests'
 default['fog']['version'] = '1.37.0'
 default['ruby-ng']['ruby_version'] = '2.1'
 default['spiff']['checksum'] = 'a34ee47a75dee89b5195d5901a4230105a5e8249b57b1c63e1c982afacfbc627'

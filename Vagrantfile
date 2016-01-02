@@ -1,6 +1,6 @@
 # -*- mode: ruby -*-
 # vi: set ft=ruby :
-require_relative 'aws_vars_test.rb'
+require_relative 'aws_vars.rb'
 include VarsAws
 
 Vagrant.configure("2") do |config|

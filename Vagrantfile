@@ -1,6 +1,6 @@
 # -*- mode: ruby -*-
 # vi: set ft=ruby :
-require_relative 'aws_vars.rb'
+require_relative 'aws_vars_test.rb'
 include VarsAws
 
 Vagrant.configure("2") do |config|
@@ -30,6 +30,8 @@ Vagrant.configure("2") do |config|
     override.ssh.username = "ubuntu"
     override.ssh.private_key_path = AWS_KEY_PEMPATH
   end
+
+  config.omnibus.chef_version = :latest
 
   config.berkshelf.enabled = true
   config.berkshelf.berksfile_path = "./cookbooks/bosh-jumpbox/Berksfile"

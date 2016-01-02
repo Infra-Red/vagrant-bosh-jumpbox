@@ -30,27 +30,23 @@ end
 
 gem_package 'fog' do
   version node['fog']['version']
-  action :install
+  action :upgrade
 end
 
 gem_package 'bosh_cli' do
-  version node['bosh']['version']
-  action :install
+  action :upgrade
 end
 
 gem_package 'bosh-bootstrap' do
-  version node['bosh-bootstrap']['version']
-  action :install
+  action :upgrade
 end
 
 gem_package 'bosh-workspace' do
-  version node['bosh-workspace']['version']
-  action :install
+  action :upgrade
 end
 
 gem_package 'cf-uaac' do
-  version node['cf-uaac']['version']
-  action :install
+  action :upgrade
 end
 
 remote_file "#{Chef::Config['file_cache_path']}/cf-cli-installer-#{node['cf-cli']['version']}.deb" do

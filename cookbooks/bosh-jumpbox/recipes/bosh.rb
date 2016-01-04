@@ -37,29 +37,15 @@ ark 'spiff' do
   action :cherry_pick
 end
 
-gem_package 'rubygems-update' do
-  action :upgrade
-end
+gems = [
+  'rubygems-update', 'bundler', 'fog', 'bosh_cli',
+  'bosh-workspace', 'cf-uaac'
+]
 
-gem_package 'fog' do
-  version node['fog']['version']
-  action :upgrade
-end
-
-gem_package 'bosh_cli' do
-  action :upgrade
-end
-
-gem_package 'bosh-bootstrap' do
-  action :upgrade
-end
-
-gem_package 'bosh-workspace' do
-  action :upgrade
-end
-
-gem_package 'cf-uaac' do
-  action :upgrade
+gems.each do |gem|
+  rvm_gem gem do
+    ruby_version node['ruby']['version']
+  end
 end
 
 remote_file "#{Chef::Config['file_cache_path']}/cf-cli-installer-#{node['cf-cli']['version']}.deb" do

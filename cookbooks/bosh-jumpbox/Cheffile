@@ -9,4 +9,5 @@ cookbook "apt",
 cookbook "golang",
   :git => "https://github.com/NOX73/chef-golang",
 
-cookbook "ruby-ng"
+cookbook "rvm_sl",
+  :git => "https://github.com/dsaenztagarro/rvm_sl"

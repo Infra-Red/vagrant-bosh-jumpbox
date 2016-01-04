@@ -9,6 +9,6 @@ version          '0.1.0'
 depends 'ark'
 depends 'apt'
 depends 'golang'
-depends 'ruby-ng'
+depends 'rvm_sl'
 
 supports 'ubuntu', '>= 14.04'

@@ -37,6 +37,15 @@ ark 'spiff' do
   action :cherry_pick
 end
 
+ark 'spruce' do
+  url node['spruce']['release']
+  creates 'spruce'
+  path node['spruce']['path']
+  mode 0755
+  checksum node['spruce']['checksum']
+  action :cherry_pick
+end
+
 gems = [
   'rubygems-update', 'bundler', 'fog', 'bosh_cli',
   'bosh-workspace', 'cf-uaac'
